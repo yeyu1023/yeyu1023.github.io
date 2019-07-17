@@ -1,29 +1,41 @@
 <!DOCTYPE html>
 <html>
-
 	<head>
-		<meta charset=utf-8>
-		<meta name=viewport content="width=device-width,initial-scale=1">
-		<title>xm</title>
-		<link rel=stylesheet href=./static/css/reset.css>
-		<link rel=stylesheet href=./static/css/animate.css>
-		<style>
-			#app {
-				font-size: 0.15rem;
-				text-align: left;
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#pag{
+				width: 100%;
+				text-align: center;
+				overflow: hidden;
+			}
+			.img1{
+				width: 80%;
+				display: inline-block;
+				border: 1px solid black;
 			}
 		</style>
-		<link href=./static/css/app.f99b33b9c90752bb5371f42cd1cf99b2.css rel=stylesheet>
 	</head>
-
 	<body>
-		<div id=app></div>
-		<script type=text/javascript src=./static/js/manifest.3ad1d5771e9b13dbdad2.js></script>
-		<script type=text/javascript src=./static/js/vendor.9713209c3988c21cfced.js></script>
-		<script type=text/javascript src=./static/js/app.4ab9d44a99912e1fecab.js></script>
+		
+    	<div class="page" id="pag" align="center">
+			<h1>下面是我的作品集</h1>
+			<h4 style="float: right;margin-right: 30%;">--陈敬英</h4>
+    	</div>
 	</body>
-	<script src=./static/js/resize.js></script>
-	<script src=./static/js/swiper.min.js></script>
-	<script></script>
-
+	<script src="js/jquery-2.2.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var pag = document.getElementById("pag");
+		for(var i = 1;i < 65;i++){
+			var img = document.createElement('img');
+			img.className = 'img1';
+			img.src = "img/1-" + i + ".jpg";
+			pag.append(img);
+		}
+	</script>
 </html>
